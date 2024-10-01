@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Todos</h1>
+    <!-- <p>{{ todos }}</p>  space hunu hudaina bracket ko bichma {yeta-space-hunu-hudaina{}nospace} -->
+    <!-- loop lagako -->
+    <a href="/create/">
+        <button>Add</button>
+    </a>
+    {% for todo in todos %}
+        <p>{{ todo.title }}
+            <a href="/update/{{ todo.id }}/">
+                <button>Update</button>
+            </a>
+            <a href="/delete/{{ todo.id }}/">
+                <button>Delete</button>
+            </a>
+        </p>
+    {% endfor %}
+</body>
+</html>
